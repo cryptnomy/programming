@@ -63,6 +63,20 @@ def swap_bits(x, i, j): # ~ O(1) independent of the word size
         x ^= bit_mask
     return x
 
+# swap_bits function without if statement
+# for comparing the execution time to the above
+def swap_bits_noif(x, i, j):
+    x ^= (1 << i) | ( 1 << j)
+    return x
+
+'''
+Execution time for swap bits function
+(1) with if statement       about 4e-7 ~ 6e-7
+(2) without if statement    about 4e-7
+
+Conclusion: better to use without if statement
+'''
+
 # 4.3 Reverse bits
 # Write a program that takes a 64-bit unsigned integer and
 # returns the 64-bit unsigned integer consisting of the bits
@@ -74,9 +88,68 @@ PRECOMPUTED_REVERSE = {}
 def reverse_bits(x):
     MASK_SIZE = 16
     BIT_MASK = 0xFFFF
-    return (PRECOMPUTED_REVERSE[x&BIT_MASK] << (3*MASK_SIZE) |
-            PRECOMPUTED_REVERSE[(x>>MASK_SIZE)&BIT_MASK] << (2*MASK_SIZE) |
-            PRECOMPUTED_REVERSE[(x>>2*MASK_SIZE)&BIT_MASK] << MASK_SIZE |
+    return (PRECOMPUTED_REVERSE[x&BIT_MASK]<<(3*MASK_SIZE) |
+            PRECOMPUTED_REVERSE[(x>>MASK_SIZE)&BIT_MASK]<<(2*MASK_SIZE) |
+            PRECOMPUTED_REVERSE[(x>>2*MASK_SIZE)&BIT_MASK]<<MASK_SIZE |
             PRECOMPUTED_REVERSE[(x>>3*MASK_SIZE)&BIT_MASK])
 
 # 4.4 Find a closest integer with the same weight
+# Write a program which takes as input a nonnegative integer x
+# and returns a number y which is not equal to x, but has
+# the same weight as x and their difference, |y-x|, is
+# as small as possible.
+def closest_int_same_bit_count(x):  # ~ O(n)
+    NUM_UNSIGNED_BITS = 64
+    for i in range(NUM_UNSIGNED_BITS - 1):
+        if (x >> i) & 1 != (x >> (i+1)) & 1:
+            x ^= (1 << i) | (1 << (i+1))  # Swaps bit-i and bit-(i+1)
+            return x
+    # Raise error if all bits of x are 0 or 1.
+    raise ValueError('All bits are 0 or 1')
+
+# 4.5 Compute x * y without arithmetical operators
+# Write a program that multiplies two nonnegative integers.
+# The only operators you are allowed to use are
+# - assignment
+# - the bitwise operators >>, <<, |, &, ~, ^ and
+# - equality checks and Boolean combinations thereof.
+def multiply(x, y):
+    def add(a, b):
+        running_sum, carryin, k, temp_a, temp_b = 0, 0, 1, a, b
+        while temp_a or temp_b:
+            ak, bk = a & k, b & k
+            carryout = (ak & bk) | (ak & carryin) | (bk & carryin)
+            running_sum |= ak ^ bk ^ carryin
+            carryin, k, temp_a, temp_b = (carryout << 1, k << 1,
+                                          temp_a >> 1, temp_b >> 1)
+        return running_sum | carryin
+
+    running_sum = 0
+    while x:    # Examines each bit of x.
+        if x & 1:
+            running_sum = add(running_sum, y)
+        x, y = x >> 1, y << 1
+    return running_sum
+
+if __name__ == '__main__':
+    pass
+'''
+    import time
+
+    x = 173 # 0b1010_1101
+    i, j = 3, 3
+    time1 = []
+    time2 = []
+    for _ in range(10000):
+        start1 = time.perf_counter()
+        swap_bits(x, i, j)
+        end1 = time.perf_counter()
+        time1.append(end1 - start1)
+    for _ in range(10000):
+        start2 = time.perf_counter()
+        swap_bits_noif(x, i, j)
+        end2 = time.perf_counter()
+        time2.append(end2 - start2)
+    print('swap bits with if statement: ', sum(time1)/len(time1))
+    print('swap bits without if statement: ', sum(time2)/len(time2))
+'''
