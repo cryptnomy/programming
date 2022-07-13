@@ -9,6 +9,13 @@
             "name": "Launch Chapter3",
             "request": "launch",
             "mainClass": "jumptojava.Chapter3",
+            "projectName": "Programming_f8433150"
+        },
+        {
+            "type": "java",
+            "name": "Launch Chapter3",
+            "request": "launch",
+            "mainClass": "jumptojava.Chapter3",
             "projectName": "Programming_5f6ab070"
         },
         {
