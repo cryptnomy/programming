@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Sample",
+            "request": "launch",
+            "mainClass": "Sample",
+            "projectName": "Programming_f8433150"
+        },
+        {
+            "type": "java",
+            "name": "Launch MultiplicationTable",
+            "request": "launch",
+            "mainClass": "MultiplicationTable",
+            "projectName": "Programming_f8433150"
+        },
+        {
+            "type": "java",
+            "name": "Launch java_prac",
+            "request": "launch",
+            "mainClass": "java_prac",
+            "projectName": "Programming_f8433150"
+        },
+        {
+            "type": "java",
+            "name": "Launch HelloWorld",
+            "request": "launch",
+            "mainClass": "HelloWorld",
+            "projectName": "Programming_f8433150"
+        },
+        {
+            "type": "java",
             "name": "Launch MowTheLawn",
             "request": "launch",
             "mainClass": "MowTheLawn",
