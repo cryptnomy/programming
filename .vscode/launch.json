@@ -6,6 +6,69 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Chapter3",
+            "request": "launch",
+            "mainClass": "jumptojava.Chapter3",
+            "projectName": "Programming_5f6ab070"
+        },
+        {
+            "type": "java",
+            "name": "Launch SampleTypeFinal",
+            "request": "launch",
+            "mainClass": "jumptojava.SampleTypeFinal",
+            "projectName": "Programming_5f6ab070"
+        },
+        {
+            "type": "java",
+            "name": "Launch SampleEnum",
+            "request": "launch",
+            "mainClass": "jumptojava.SampleEnum",
+            "projectName": "Programming_5f6ab070"
+        },
+        {
+            "type": "java",
+            "name": "Launch SampleSet",
+            "request": "launch",
+            "mainClass": "jumptojava.SampleSet",
+            "projectName": "Programming_5f6ab070"
+        },
+        {
+            "type": "java",
+            "name": "Launch SampleMap",
+            "request": "launch",
+            "mainClass": "jumptojava.SampleMap",
+            "projectName": "Programming_5f6ab070"
+        },
+        {
+            "type": "java",
+            "name": "Launch SampleList",
+            "request": "launch",
+            "mainClass": "jumptojava.SampleList",
+            "projectName": "Programming_5f6ab070"
+        },
+        {
+            "type": "java",
+            "name": "Launch SampleArray",
+            "request": "launch",
+            "mainClass": "jumptojava.SampleArray",
+            "projectName": "Programming_5f6ab070"
+        },
+        {
+            "type": "java",
+            "name": "Launch SampleStringBuffer",
+            "request": "launch",
+            "mainClass": "jumptojava.SampleStringBuffer",
+            "projectName": "Programming_5f6ab070"
+        },
+        {
+            "type": "java",
+            "name": "Launch Sample",
+            "request": "launch",
+            "mainClass": "Sample",
+            "projectName": "Programming_5f6ab070"
+        },
+        {
+            "type": "java",
             "name": "Launch Sample",
             "request": "launch",
             "mainClass": "Sample",
