@@ -1,0 +1,125 @@
+package jumptojava;
+
+class Animal {
+    String name;
+
+    void setName(String name) {
+        this.name = name;
+    }
+}
+// Inheritance - extends keyword
+// "Dog is a Anmimal" -> IS-A relationship
+class Dog extends Animal {
+    // Default
+    Dog() {
+
+    }
+    
+    void sleep() {
+        System.out.println(this.name + " zzz");
+    }
+}
+
+class HouseDog extends Dog {
+    // Constructor
+    HouseDog(String name) {
+        this.setName(name);
+    }
+    // Constructor overloading
+    HouseDog(int type) {
+        if (type == 1) {
+            this.setName("yorkshire");
+        } else if (type == 2) {
+            this.setName("bulldog");
+        }
+    }
+    // Method overridng
+    void sleep() {
+        System.out.println(this.name + " zzz in house");
+    }
+    // Method overloading
+    void sleep(int hour) {
+        System.out.println(this.name + " zzz in house for "
+                              + hour + " hours");
+    }
+}
+
+class Tiger extends Animal implements Predator, Barkable {
+    public String getFood() {
+        return "apple";
+    }
+
+    public void bark() {
+        System.out.println("어흥");
+    }
+}
+
+class Lion extends Animal implements Predator, Barkable {
+    public String getFood() {
+        return "banana";
+    }
+
+    public void bark() {
+        System.out.println("으르렁");
+    }
+}
+/*
+ * Important facts?
+ * No - # of methods decreased
+ * Yes - ZooKeeper class being independent of animal types
+ */
+class ZooKeeper {
+    void feed(Predator predator) {
+        System.out.println("feed" + predator.getFood());
+    }
+    /*
+    void feed(Tiger tiger) {
+        System.out.println("feed apple");
+    }
+
+    void feed(Lion lion) {
+        System.out.println("feed banana");
+    }
+    */
+}
+// Polymorphism
+class Bouncer {
+    void barkAnimal(Barkable animal) {
+        animal.bark();
+        /*
+        // instanceof: Java's built-in command used to check
+        //             which object is of a specific class
+        if (animal instanceof Tiger) {
+            System.out.println("어흥");
+        } else if (animal instanceof Lion) {
+            System.out.println("으르렁");
+        }
+        */
+    }
+}
+
+public class SampleInheritance {
+    public static void main(String[] args) {
+        Dog dog = new Dog();
+        dog.setName("poppy");
+        System.out.println(dog.name);
+        // Animal dog = new Dog(); ~ possible
+        // But unable to use sleep method.
+        // Dog dog = new Animal(); ~ compile error
+        dog.sleep();
+        
+        HouseDog houseDog = new HouseDog("unhappy");
+        houseDog.setName("happy");
+        // Method overriding
+        houseDog.sleep();   // happy zzz
+        houseDog.sleep(3);
+    }
+}
+
+/*
+ * Java does not support multiple inheritance.
+ * (ex)
+ * class A { ~ }
+ * class B { ~ }
+ * class C extends A, B // compile error
+ */

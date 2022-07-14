@@ -1,0 +1,33 @@
+package jumptojava;
+// Interface docs
+interface Predator {
+    String getFood();
+
+    default void printFood() {
+        System.out.printf("my food is %s\n", getFood());
+    }
+
+    int LEG_COUNT = 4;  //  interface constant
+
+    static int speed() {
+        return LEG_COUNT * 30;
+    }
+}
+// Polymorphism docs
+interface Barkable {
+    void bark();
+}
+// Multiple inheritance supported
+interface BarkablePredator extends Barkable, Predator {
+
+}
+
+public class SampleInterface {
+    public static void main(String[] args) {
+        ZooKeeper zooKeeper = new ZooKeeper();
+        Tiger tiger = new Tiger();
+        Lion lion = new Lion();
+        zooKeeper.feed(tiger);  // feed apple
+        zooKeeper.feed(lion);   // feed banana
+    }
+}

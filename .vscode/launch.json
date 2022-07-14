@@ -6,6 +6,48 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch SampleAbstractClass",
+            "request": "launch",
+            "mainClass": "jumptojava.SampleAbstractClass",
+            "projectName": "Programming_f8433150"
+        },
+        {
+            "type": "java",
+            "name": "Launch SamplePolymorphism",
+            "request": "launch",
+            "mainClass": "jumptojava.SamplePolymorphism",
+            "projectName": "Programming_f8433150"
+        },
+        {
+            "type": "java",
+            "name": "Launch SampleInterface",
+            "request": "launch",
+            "mainClass": "jumptojava.SampleInterface",
+            "projectName": "Programming_f8433150"
+        },
+        {
+            "type": "java",
+            "name": "Launch SampleConstructor",
+            "request": "launch",
+            "mainClass": "jumptojava.SampleConstructor",
+            "projectName": "Programming_f8433150"
+        },
+        {
+            "type": "java",
+            "name": "Launch SampleInheritance",
+            "request": "launch",
+            "mainClass": "jumptojava.SampleInheritance",
+            "projectName": "Programming_f8433150"
+        },
+        {
+            "type": "java",
+            "name": "Launch SampleCallByValue",
+            "request": "launch",
+            "mainClass": "jumptojava.SampleCallByValue",
+            "projectName": "Programming_f8433150"
+        },
+        {
+            "type": "java",
             "name": "Launch SampleForLoop",
             "request": "launch",
             "mainClass": "jumptojava.SampleForLoop",

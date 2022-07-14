@@ -9,7 +9,7 @@ public class SampleList {
         // Mr. Park throws pitches three times with
         // moving speed of 138, 129, and, 142 km/h, respectively
         // add
-        ArrayList pitches = new ArrayList();
+        ArrayList<Object> pitches = new ArrayList<>();
         // ArrayList members type ~ Object (not string or int)
         pitches.add("138");
         pitches.add(129);

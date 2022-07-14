@@ -1,0 +1,10 @@
+package jumptojava;
+
+public class SampleConstructor {
+    public static void main(String[] args) {
+        HouseDog happy = new HouseDog("happy");
+        HouseDog yorkshire = new HouseDog(1);
+        System.out.println(happy.name);     // happy
+        System.out.println(yorkshire.name); // yorkshire
+    }
+}

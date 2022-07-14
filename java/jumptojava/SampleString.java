@@ -26,7 +26,7 @@ public class SampleString {
         // toUpperCase
         System.out.println(d.toUpperCase());
         // split
-        String[] d2 = d.split(" ");
+        // String[] d2 = d.split(" ");
         // Formatting
         System.out.println(String.format("I have %d apples.", 3));
         System.out.println(String.format("I have %s apples.", "three"));
