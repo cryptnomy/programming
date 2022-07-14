@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch SampleForLoop",
+            "request": "launch",
+            "mainClass": "jumptojava.SampleForLoop",
+            "projectName": "Programming_5f6ab070"
+        },
+        {
+            "type": "java",
             "name": "Launch Chapter3",
             "request": "launch",
             "mainClass": "jumptojava.Chapter3",

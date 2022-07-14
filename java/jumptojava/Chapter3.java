@@ -8,17 +8,17 @@ import java.util.HashSet;
 import java.util.List;
 
 public class Chapter3 {
-    private static double getAverage(List<Integer> list) {
-        return list.stream()
-                   .mapToInt(a -> a)
-                   .average().orElse(0);
-    }
-    
     enum CoffeeType {
         AMERICANO,
         ICE_AMERICANO,
         CAFE_LATTE
     };
+    
+    private static double getAverage(List<Integer> list) {
+        return list.stream()
+                   .mapToInt(a -> a)
+                   .average().orElse(0);
+    }
 
     static void printCoffeePrice(CoffeeType type){
         HashMap<CoffeeType, Integer> priceMap = new HashMap<>();
@@ -66,5 +66,5 @@ public class Chapter3 {
         System.out.println(res9);   // [1, 2, 3, 4, 5]
         // Q10. enum
         printCoffeePrice(CoffeeType.AMERICANO);
-    }   
+    }
 }
