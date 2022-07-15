@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Chapter4",
+            "request": "launch",
+            "mainClass": "jumptojava.Chapter4",
+            "projectName": "Programming_f8433150"
+        },
+        {
+            "type": "java",
             "name": "Launch SampleAbstractClass",
             "request": "launch",
             "mainClass": "jumptojava.SampleAbstractClass",

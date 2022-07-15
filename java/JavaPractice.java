@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class java_prac {
+public class JavaPractice {
     public static void main(String[] args) {
         Map<String, String> map = new HashMap<>();
         map.put("001", "gildong");
