@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch SampleFileIO",
+            "request": "launch",
+            "mainClass": "jumptojava.SampleFileIO",
+            "projectName": "Programming_5f6ab070"
+        },
+        {
+            "type": "java",
+            "name": "Launch SampleConsoleIO",
+            "request": "launch",
+            "mainClass": "jumptojava.SampleConsoleIO",
+            "projectName": "Programming_5f6ab070"
+        },
+        {
+            "type": "java",
+            "name": "Launch Chapter5",
+            "request": "launch",
+            "mainClass": "jumptojava.Chapter5",
+            "projectName": "Programming_5f6ab070"
+        },
+        {
+            "type": "java",
             "name": "Launch Chapter4",
             "request": "launch",
             "mainClass": "jumptojava.Chapter4",
