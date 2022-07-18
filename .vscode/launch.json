@@ -6,6 +6,62 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch BJ3055SDS",
+            "request": "launch",
+            "mainClass": "sds_algorithm.src.DAY01.BJ3055.BJ3055SDS",
+            "projectName": "Programming_5f6ab070"
+        },
+        {
+            "type": "java",
+            "name": "Launch BJ1759_sds",
+            "request": "launch",
+            "mainClass": "sds_algorithm.src.DAY01.BJ1759.BJ1759_sds",
+            "projectName": "Programming_5f6ab070"
+        },
+        {
+            "type": "java",
+            "name": "Launch BJ1759",
+            "request": "launch",
+            "mainClass": "sds_algorithm.src.DAY01.BJ1759.BJ1759",
+            "projectName": "Programming_5f6ab070"
+        },
+        {
+            "type": "java",
+            "name": "Launch BJ1062",
+            "request": "launch",
+            "mainClass": "sds_algorithm.src.DAY01.BJ1062.BJ1062",
+            "projectName": "Programming_5f6ab070"
+        },
+        {
+            "type": "java",
+            "name": "Launch Fibonacci",
+            "request": "launch",
+            "mainClass": "sds_algorithm.src.DAY01.DFS.Fibonacci",
+            "projectName": "Programming_5f6ab070"
+        },
+        {
+            "type": "java",
+            "name": "Launch Dfs",
+            "request": "launch",
+            "mainClass": "sds_algorithm.src.DAY01.DFS.Dfs",
+            "projectName": "Programming_5f6ab070"
+        },
+        {
+            "type": "java",
+            "name": "Launch PracticeStream",
+            "request": "launch",
+            "mainClass": "jumptojava.PracticeStream",
+            "projectName": "Programming_5f6ab070"
+        },
+        {
+            "type": "java",
+            "name": "Launch Chapter6",
+            "request": "launch",
+            "mainClass": "jumptojava.Chapter6",
+            "projectName": "Programming_5f6ab070"
+        },
+        {
+            "type": "java",
             "name": "Launch Chapter6",
             "request": "launch",
             "mainClass": "jumptojava.Chapter6",

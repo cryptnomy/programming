@@ -10,6 +10,8 @@ import java.util.ArrayList;
 
 public class Chapter6 {
     public static void main(String[] args) throws IOException {
+        String filepath = "c:/Users/after/Documents/Programming/java/jumptojava/";
+        //String filepath = "d:/GT/Programming/java/jumptojava/";
         // Q1. Sum of two integers
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine(), " ");
@@ -24,14 +26,15 @@ public class Chapter6 {
             System.out.println(line.toUpperCase());
         }
         // Q3. Save a file and then read it
-        FileWriter fw3 = new FileWriter("WriteOnce.txt");
+        FileWriter fw3 = new FileWriter(filepath + "WriteOnce.txt");
         fw3.write("Write once, run anywhere\n");
         fw3.close();
-        BufferedReader br3 = new BufferedReader(new FileReader("WriteOnce.txt"));
+        BufferedReader br3 = new BufferedReader(new FileReader(filepath + "WriteOnce.txt"));
         String line3 = br3.readLine();
         System.out.println(line3);
+        br3.close();    // why needed?
         // Q4. Write a user input to a file
-        FileWriter fw4 = new FileWriter("KeepContents.txt", true);
+        FileWriter fw4 = new FileWriter(filepath + "KeepContents.txt", true);
         System.out.println("Enter a sentence: ");
         BufferedReader br4 = new BufferedReader(new InputStreamReader(System.in));
         String line4 = br4.readLine();
@@ -39,7 +42,7 @@ public class Chapter6 {
         fw4.close();
         // Q5. Replace contents in a file
         ArrayList<String> al5 = new ArrayList<>();
-        BufferedReader br5 = new BufferedReader(new FileReader("PythonSaying.txt"));
+        BufferedReader br5 = new BufferedReader(new FileReader(filepath + "PythonSaying.txt"));
         while (true) {
             String line5 = br5.readLine();
             if (line5 == null) break;
@@ -48,7 +51,7 @@ public class Chapter6 {
         br5.close();
         String text5 = String.join("\n", al5);
         text5 = text5.replaceAll("Python", "Java");
-        FileWriter fw5 = new FileWriter("PythonSaying.txt");
+        FileWriter fw5 = new FileWriter(filepath + "PythonSaying.txt");
         fw5.write(text5);
         fw5.close();
     }
