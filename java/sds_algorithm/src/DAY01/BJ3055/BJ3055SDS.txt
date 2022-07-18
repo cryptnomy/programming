@@ -59,8 +59,8 @@ public class BJ3055SDS {
                 int tx = p.x + MX[i];
                 // 4. 갈 수 있는가? -> (공통): 맵 안에 들어오는가
                 if (-1 < ty && ty < R && -1 < tx && tx < C) {
-                    if (p.type == 'S' || p.type == '.') {
-                        // 4. 갈 수 있는가? -> (고슴도치): . or D or 방문하지 않은 곳
+                    if (p.type == '.' || p.type == 'S') {
+                        // 4. 갈 수 있는가? -> (고슴도치): (. or D) and 방문하지 않은 곳
                         if ((fields[ty][tx] == '.' || fields[ty][tx] == 'D') && dp[ty][tx] == 0) {
                             // 5. 체크인 (고슴도치): dp[][] = 이동거리
                             dp[ty][tx] = dp[p.y][p.x] + 1;

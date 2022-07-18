@@ -41,7 +41,6 @@ public class BJ3055My {
     }
 
     static void bfs() {
-        int 
     }
 
     static boolean isInField(int r, int c) {
