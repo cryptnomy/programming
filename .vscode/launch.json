@@ -6,6 +6,76 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch BJ1072",
+            "request": "launch",
+            "mainClass": "sds_algorithm.src.DAY02.BJ1072.BJ1072",
+            "projectName": "Programming_5f6ab070"
+        },
+        {
+            "type": "java",
+            "name": "Launch BJ2143SDS",
+            "request": "launch",
+            "mainClass": "sds_algorithm.src.DAY02.BJ2143.BJ2143SDS",
+            "projectName": "Programming_5f6ab070"
+        },
+        {
+            "type": "java",
+            "name": "Launch BJ2143My",
+            "request": "launch",
+            "mainClass": "sds_algorithm.src.DAY02.BJ2143.BJ2143My",
+            "projectName": "Programming_5f6ab070"
+        },
+        {
+            "type": "java",
+            "name": "Launch BJ2805SDS",
+            "request": "launch",
+            "mainClass": "sds_algorithm.src.DAY02.BJ2805.BJ2805SDS",
+            "projectName": "Programming_5f6ab070"
+        },
+        {
+            "type": "java",
+            "name": "Launch BJ2805",
+            "request": "launch",
+            "mainClass": "sds_algorithm.src.DAY02.BJ2805.BJ2805",
+            "projectName": "Programming_5f6ab070"
+        },
+        {
+            "type": "java",
+            "name": "Launch BJ1806",
+            "request": "launch",
+            "mainClass": "sds_algorithm.src.DAY02.BJ1806.BJ1806",
+            "projectName": "Programming_5f6ab070"
+        },
+        {
+            "type": "java",
+            "name": "Launch BJ2003My",
+            "request": "launch",
+            "mainClass": "sds_algorithm.src.DAY02.BJ2003.BJ2003My",
+            "projectName": "Programming_5f6ab070"
+        },
+        {
+            "type": "java",
+            "name": "Launch BJ1713SDS",
+            "request": "launch",
+            "mainClass": "sds_algorithm.src.DAY02.BJ1713.BJ1713SDS",
+            "projectName": "Programming_5f6ab070"
+        },
+        {
+            "type": "java",
+            "name": "Launch BJ1713My",
+            "request": "launch",
+            "mainClass": "sds_algorithm.src.DAY02.BJ1713.BJ1713My",
+            "projectName": "Programming_5f6ab070"
+        },
+        {
+            "type": "java",
+            "name": "Launch SortTest",
+            "request": "launch",
+            "mainClass": "sds_algorithm.src.DAY02.SortTest.SortTest",
+            "projectName": "Programming_5f6ab070"
+        },
+        {
+            "type": "java",
             "name": "Launch BJ3055Prac1",
             "request": "launch",
             "mainClass": "sds_algorithm.src.DAY01.BJ3055.BJ3055Prac1",
