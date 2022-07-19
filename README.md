@@ -1,7 +1,7 @@
 # programming repository
 
 ### Purpose
-  - To study the basics of some programming languages: Python, Java, JavaScript, etc.
+  - To study the basics of some programming languages: Python, Java, or JavaScript, etc.
   
 ### Notes
 "java" and "python" directories contain ...
