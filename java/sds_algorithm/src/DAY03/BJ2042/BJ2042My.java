@@ -5,12 +5,11 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class BJ2042My {
     static int N, M, K;
-    static long[] given, tree;
+    static long[] tree;
     static int S;
 
     public static void main(String[] args) throws IOException {
@@ -22,45 +21,40 @@ public class BJ2042My {
         M = Integer.parseInt(st.nextToken());
         K = Integer.parseInt(st.nextToken());
 
-        given = new long[N+1];
+        // arr = new long[N];
+        // for (int i = 0; i < N; i++) {
+        //     arr[i] = Long.parseLong(br.readLine());
+        // }
+
         S = 1;
-        while (S < N) { S *= 2; }
+        while (S < N) { S <<= 1; }
         tree = new long[S*2];
-        for (int i = 1; i < N + 1; i++) {
-            given[i] = Long.parseLong(br.readLine());
+        // Bottom-up initialization
+        for (int i = S; i < N + S; i++) {
+            tree[i] = Long.parseLong(br.readLine());
+        }
+        for (int i = S; i < N + S; i++) { // no elem at index 0
+            int p = i >> 1;
+            while (p != 0) {
+                tree[p] += tree[i];
+                p >>= 1;
+            }
         }
 
-        init();
-
         StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < M+K; i++) {
+        for (int i = 0; i < M + K; i++) {
             st = new StringTokenizer(br.readLine());
             int a = Integer.parseInt(st.nextToken());
             int b = Integer.parseInt(st.nextToken());
-            if (a == 1) {
-                long c = Long.parseLong(st.nextToken());
-                long diff = c - given[b];
-                given[b] = c;
-                update(1, N, 1, b, diff);
-            } else if (a == 2) {
-                int c = Integer.parseInt(st.nextToken());
-                sb.append(query(1, N, 1, b, c) + "\n");
-            }
+            long c = Long.parseLong(st.nextToken());
+
+            if (a == 1) { updateBU(b, (int)c); }
+            else if (a == 2) { sb.append(queryBU(b, (int)c)).append("\n"); }
         }
         bw.write(sb.toString());
-        bw.flush();
-        bw.close();
-        br.close();        
+        bw.flush();       
     }
-    // Bottom-up initialization
-    static void init() {
-        for (int i = 0; i < N; i++) {
-            tree[S + i] = given[i + 1];
-        }
-        for (int i = S - 1; i > 0; i--) { // no elem at index 0
-            tree[i] = tree[2*i] + tree[2*i + 1];
-        }
-    }
+
     // Top-down query
     static long query(int left, int right, int node, int queryLeft, int queryRight) {
         if (queryRight < left || right < queryLeft) { return 0; }
@@ -77,13 +71,34 @@ public class BJ2042My {
         if (target < left || right < target) { return; }
         else {
             tree[node] += diff;
-            if (left == right) { return; }
-            int mid = (left + right) / 2;
-            update(left, mid, node*2, target, diff);
-            update(mid + 1, right, node*2 + 1, target, diff);
+            if (left != right) {
+                int mid = (left + right) / 2;
+                update(left, mid, node*2, target, diff);
+                update(mid + 1, right, node*2 + 1, target, diff);
+            }
         }
     }
     // Bottom-up query
-
+    static long queryBU(int queryLeft, int queryRight) {
+        int left = S + queryLeft - 1;
+        int right = S + queryRight - 1;
+        long sum = 0;
+        while (left < right) {
+            if ((left & 1) == 1) { sum += tree[left++]; }
+            if ((right & 1) == 0) { sum += tree[right--]; }
+            left >>= 1;
+            right >>= 1;
+        }
+        if (left == right) sum += tree[left];
+        return sum;
+    }
     // Bottom-up update
+    static void updateBU(int target, long value) {
+        target += S - 1;
+        long diff = value - tree[target];
+        while (target != 0) {
+            tree[target] += diff;
+            target >>= 1;
+        }
+    }
 }

@@ -9,13 +9,13 @@ q, dist = [], 0
 
 for r in range(R):
     for c in range(C):
-        if fields[r][c] == 'S': # source
+        if fields[r][c] == 'S':     # source
             dp[r][c] = 1
             s = (r, c)
-        if fields[r][c] == '*': # flooded field
+        if fields[r][c] == '*':     # flooded field
             dp[r][c] = 1
-            q.append((r, c, True)) # True if flooded
-q.append((s[0], s[1], False))      # False if source
+            q.append((r, c, True))  # True if flooded
+q.append((s[0], s[1], False))       # False if source
 
 while q and not dist:
     y, x, flooded = q.pop(0)
