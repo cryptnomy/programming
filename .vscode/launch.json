@@ -6,6 +6,55 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch BJ2824",
+            "request": "launch",
+            "mainClass": "sds_algorithm.src.DAY04.BJ2824.BJ2824",
+            "projectName": "Programming_5f6ab070"
+        },
+        {
+            "type": "java",
+            "name": "Launch BJ11653",
+            "request": "launch",
+            "mainClass": "sds_algorithm.src.DAY04.BJ11653.BJ11653",
+            "projectName": "Programming_5f6ab070"
+        },
+        {
+            "type": "java",
+            "name": "Launch BJ2960",
+            "request": "launch",
+            "mainClass": "sds_algorithm.src.DAY04.BJ2960.BJ2960",
+            "projectName": "Programming_5f6ab070"
+        },
+        {
+            "type": "java",
+            "name": "Launch BJ6588",
+            "request": "launch",
+            "mainClass": "sds_algorithm.src.DAY04.BJ6588.BJ6588",
+            "projectName": "Programming_5f6ab070"
+        },
+        {
+            "type": "java",
+            "name": "Launch BJ3955SDS",
+            "request": "launch",
+            "mainClass": "sds_algorithm.src.DAY04.BJ3955.BJ3955SDS",
+            "projectName": "Programming_5f6ab070"
+        },
+        {
+            "type": "java",
+            "name": "Launch BJ14476SDS",
+            "request": "launch",
+            "mainClass": "sds_algorithm.src.DAY04.BJ14476.BJ14476SDS",
+            "projectName": "Programming_5f6ab070"
+        },
+        {
+            "type": "java",
+            "name": "Launch BJ14476",
+            "request": "launch",
+            "mainClass": "sds_algorithm.src.DAY04.BJ14476.BJ14476",
+            "projectName": "Programming_5f6ab070"
+        },
+        {
+            "type": "java",
             "name": "Launch BJ2243",
             "request": "launch",
             "mainClass": "sds_algorithm.src.DAY03.BJ2243.BJ2243",
