@@ -6,6 +6,69 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch BJ1722SDS",
+            "request": "launch",
+            "mainClass": "sds_algorithm.src.DAY05.BJ1722.BJ1722SDS",
+            "projectName": "Programming_5f6ab070"
+        },
+        {
+            "type": "java",
+            "name": "Launch BJ1722",
+            "request": "launch",
+            "mainClass": "sds_algorithm.src.DAY05.BJ1722.BJ1722",
+            "projectName": "Programming_5f6ab070"
+        },
+        {
+            "type": "java",
+            "name": "Launch BJ11051",
+            "request": "launch",
+            "mainClass": "sds_algorithm.src.DAY05.BJ11051.BJ11051",
+            "projectName": "Programming_5f6ab070"
+        },
+        {
+            "type": "java",
+            "name": "Launch BJ1256SDS",
+            "request": "launch",
+            "mainClass": "sds_algorithm.src.DAY05.BJ1256.BJ1256SDS",
+            "projectName": "Programming_5f6ab070"
+        },
+        {
+            "type": "java",
+            "name": "Launch BJ1256",
+            "request": "launch",
+            "mainClass": "sds_algorithm.src.DAY05.BJ1256.BJ1256",
+            "projectName": "Programming_5f6ab070"
+        },
+        {
+            "type": "java",
+            "name": "Launch BJ11050",
+            "request": "launch",
+            "mainClass": "sds_algorithm.src.DAY05.BJ11050.BJ11050",
+            "projectName": "Programming_5f6ab070"
+        },
+        {
+            "type": "java",
+            "name": "Launch BJ1837Other",
+            "request": "launch",
+            "mainClass": "sds_algorithm.src.DAY05.BJ1837Other",
+            "projectName": "Programming_5f6ab070"
+        },
+        {
+            "type": "java",
+            "name": "Launch BJ1837SDS",
+            "request": "launch",
+            "mainClass": "sds_algorithm.src.DAY05.BJ1837SDS",
+            "projectName": "Programming_5f6ab070"
+        },
+        {
+            "type": "java",
+            "name": "Launch BJ1837",
+            "request": "launch",
+            "mainClass": "sds_algorithm.src.DAY05.BJ1837",
+            "projectName": "Programming_5f6ab070"
+        },
+        {
+            "type": "java",
             "name": "Launch BJ2824",
             "request": "launch",
             "mainClass": "sds_algorithm.src.DAY04.BJ2824.BJ2824",
