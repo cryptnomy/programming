@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch BJ9202Other",
+            "request": "launch",
+            "mainClass": "sds_algorithm.src.DAY04.BJ9202.BJ9202Other",
+            "projectName": "Programming_5f6ab070"
+        },
+        {
+            "type": "java",
+            "name": "Launch BJ9202SDS",
+            "request": "launch",
+            "mainClass": "sds_algorithm.src.DAY04.BJ9202.BJ9202SDS",
+            "projectName": "Programming_5f6ab070"
+        },
+        {
+            "type": "java",
             "name": "Launch BJ1722SDS",
             "request": "launch",
             "mainClass": "sds_algorithm.src.DAY05.BJ1722.BJ1722SDS",
