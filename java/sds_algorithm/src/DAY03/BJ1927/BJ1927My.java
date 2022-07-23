@@ -3,6 +3,11 @@ package DAY03.BJ1927;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+<<<<<<< HEAD
+=======
+// import java.util.ArrayList;
+// import java.util.List;
+>>>>>>> 38c932829ec19b74b03691b43c569966f5cbeb43
 
 // class MinHeap {
 //     private int[] arr;
