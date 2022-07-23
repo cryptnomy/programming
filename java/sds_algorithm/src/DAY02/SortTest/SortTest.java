@@ -1,4 +1,4 @@
-package sds_algorithm.src.DAY02.SortTest;
+package DAY02.SortTest;
 
 import java.util.ArrayList;
 import java.util.Collections;

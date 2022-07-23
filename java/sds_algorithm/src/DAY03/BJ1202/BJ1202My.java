@@ -1,4 +1,4 @@
-package sds_algorithm.src.DAY03.BJ1202;
+package DAY03.BJ1202;
 // 4 n log(n) ~ O(n log(n))
 
 import java.io.BufferedReader;

@@ -1,4 +1,4 @@
-package sds_algorithm.src.DAY01.BJ1759;
+package DAY01.BJ1759;
 
 import java.io.IOException;
 import java.util.Arrays;

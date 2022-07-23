@@ -1,4 +1,4 @@
-package sds_algorithm.src.DAY02.BJ1713;
+package DAY02.BJ1713;
 
 //import java.io.FileInputStream;
 import java.io.IOException;

@@ -1,10 +1,10 @@
-package sds_algorithm.src.DAY03.BJ1927;
+package DAY03.BJ1927;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.List;
+// import java.util.ArrayList;
+// import java.util.List;
 
 // class MinHeap {
 //     private int[] arr;

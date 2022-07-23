@@ -1,4 +1,4 @@
-package sds_algorithm.src.DAY03.BJ2042;
+package DAY03.BJ2042;
 
 import java.io.BufferedReader;
 //import java.io.FileInputStream;

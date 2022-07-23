@@ -1,4 +1,4 @@
-package sds_algorithm.src.DAY04.BJ14476;
+package DAY04.BJ14476;
 
 import java.io.BufferedReader;
 import java.io.IOException;

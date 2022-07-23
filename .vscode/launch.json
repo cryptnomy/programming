@@ -6,6 +6,41 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch SampleFunctionalProgramming",
+            "request": "launch",
+            "mainClass": "jumptojava.SampleFunctionalProgramming",
+            "projectName": "Programming_5f6ab070"
+        },
+        {
+            "type": "java",
+            "name": "Launch SampleThread",
+            "request": "launch",
+            "mainClass": "jumptojava.SampleThread",
+            "projectName": "Programming_5f6ab070"
+        },
+        {
+            "type": "java",
+            "name": "Launch SampleException",
+            "request": "launch",
+            "mainClass": "jumptojava.SampleException",
+            "projectName": "Programming_5f6ab070"
+        },
+        {
+            "type": "java",
+            "name": "Launch SampleStatic",
+            "request": "launch",
+            "mainClass": "jumptojava.SampleStatic",
+            "projectName": "Programming_5f6ab070"
+        },
+        {
+            "type": "java",
+            "name": "Launch BJ1927",
+            "request": "launch",
+            "mainClass": "sds_algorithm.src.DAY03.BJ1927.BJ1927",
+            "projectName": "Programming_5f6ab070"
+        },
+        {
+            "type": "java",
             "name": "Launch BJ9202Other",
             "request": "launch",
             "mainClass": "sds_algorithm.src.DAY04.BJ9202.BJ9202Other",

@@ -1,4 +1,4 @@
-package sds_algorithm.src.DAY04.BJ9202;
+package DAY04.BJ9202;
 
 public class BJ9202 {
     public static void main(String[] args) {

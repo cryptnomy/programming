@@ -1,4 +1,4 @@
-package sds_algorithm.src.DAY01.DFS;
+package DAY01.DFS;
 
 import java.io.BufferedReader;
 import java.io.IOException;
