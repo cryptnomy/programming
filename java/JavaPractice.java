@@ -15,5 +15,11 @@ public class JavaPractice {
             String key = iter.next();
             System.out.println("key: " + key + ", value: " + map.get(key));
         }
+        String temp = "NUM 234245";
+        List<String> list = new ArrayList<>();
+        list.add(temp.substring(0, 3));
+        list.add(temp.substring(4));
+        System.out.println(Arrays.toString(list.toArray()));
+        System.exit(0);
     }
 }

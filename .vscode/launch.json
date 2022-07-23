@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch BJ3425",
+            "request": "launch",
+            "mainClass": "AlgorithmBasics.BJ3425.BJ3425",
+            "projectName": "Programming_f8433150"
+        },
+        {
+            "type": "java",
             "name": "Launch BJ9202Other",
             "request": "launch",
             "mainClass": "sds_algorithm.src.DAY04.BJ9202.BJ9202Other",

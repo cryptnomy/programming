@@ -1,4 +1,4 @@
-package sds_algorithm.src.DAY04.BJ3955;
+package DAY04.BJ3955;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -22,13 +22,13 @@ public class BJ3955 {
             // Kx + 1 = Cy, or (-K)x + Cy = 1
             // x = x0 + (C/d)k
             // y = y0 - (-K/d)k
-            int answer = linearDiophantine(-K, C)
+            //int answer = linearDiophantine(-K, C);
         }
     }
 
     static int linearDiophantine(int a, int b) {
         // ax + by = 1
-        
+        return 0;
     }
 
     static int gcd(int a, int b) { return b == 0 ? a : gcd(b, a % b); }
