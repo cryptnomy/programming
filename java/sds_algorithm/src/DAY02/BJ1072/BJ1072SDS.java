@@ -15,7 +15,7 @@ public class BJ1072SDS {
         x = Long.parseLong(st.nextToken());
         y = Long.parseLong(st.nextToken());
 
-        z = y * 100 / x;
+        z = 100 * y / x;
         if (z >= 99) {
             System.out.println(-1);
         } else {
@@ -23,7 +23,7 @@ public class BJ1072SDS {
             long end = x;
             while (start < end) {
                 long mid = (start + end) / 2;
-                long newRate = (100 * (y + mid)) / 2;
+                long newRate = 100 * (y + mid) / 2;
                 // 승률이 그대로인 경우
                 if (newRate == z) {
                     start = mid + 1;

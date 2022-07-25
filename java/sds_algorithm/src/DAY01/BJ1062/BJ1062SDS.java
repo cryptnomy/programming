@@ -1,7 +1,9 @@
 package DAY01.BJ1062;
 
+import java.io.BufferedReader;
 import java.io.IOException;
-import java.util.Scanner;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class BJ1062SDS {
 
@@ -12,23 +14,11 @@ public class BJ1062SDS {
     static int max = 0;
 
     public static void main(String[] args) throws IOException {
-        Scanner sc = new Scanner(System.in);
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(br.readLine());
 
-        N = sc.nextInt();
-        K = sc.nextInt();
-
-        words = new String[N];
-        for (int i = 0; i < N; i++) {
-            words[i] = sc.next().replaceAll("[antic]", "");
-        }
-        sc.close();
-
-        visited = new boolean[26];
-        visited['a' - 'a'] = true;
-        visited['n' - 'a'] = true;
-        visited['t' - 'a'] = true;
-        visited['i' - 'a'] = true;
-        visited['c' - 'a'] = true;
+        N = Integer.parseInt(st.nextToken());
+        K = Integer.parseInt(st.nextToken());
 
         if (K < 5) {
             System.out.println(0);
@@ -38,6 +28,18 @@ public class BJ1062SDS {
             return;
         }
 
+        words = new String[N];
+        for (int i = 0; i < N; i++) {
+            words[i] = br.readLine().replaceAll("[antic]", "");
+        }
+
+        visited = new boolean[26];
+        visited['a' - 'a'] = true;
+        visited['n' - 'a'] = true;
+        visited['t' - 'a'] = true;
+        visited['i' - 'a'] = true;
+        visited['c' - 'a'] = true;
+
         selectedCount = 5;
         max = countWords();
 
@@ -46,7 +48,6 @@ public class BJ1062SDS {
                 dfs(i);
             }
         }
-
         System.out.println(max);
     }
 
@@ -56,14 +57,12 @@ public class BJ1062SDS {
         visited[index] = true;
         selectedCount++;
         // 2. 목적지인가?: selectedCount == K => 읽을 수 있는 단어 개수
-        if (selectedCount == K) {
-            // 계산
-            max = Math.max(max, countWords());
-        } else {
+        if (selectedCount == K) { max = Math.max(max, countWords()); }  // 계산
+        else {
             // 3. 연결된 곳을 순회: index + 1 ~ 25(= 26-1) 번째까지
             for (int i = index + 1; i < 26; i++) {
                 // 4. 갈 수 있는가?: 방문 여부
-                if (visited[i] == false) {
+                if (!visited[i]) {
                     // 5. 간다: dfs()
                     dfs(i);
                 }
@@ -80,7 +79,7 @@ public class BJ1062SDS {
             boolean isPossible = true;
             String word = words[n];
             for (int i = 0; i < word.length(); i++) {
-                if (visited[word.charAt(i) - 'a'] == false) {
+                if (!visited[word.charAt(i) - 'a']) {
                     isPossible = false;
                     break;
                 }

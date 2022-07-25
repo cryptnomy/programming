@@ -22,11 +22,8 @@ public class BJ3955 {
             // Kx + 1 = Cy, or (-K)x + Cy = 1
             // x = x0 + (C/d)k
             // y = y0 - (-K/d)k
-<<<<<<< HEAD
             //int answer = linearDiophantine(-K, C);
-=======
             int answer = linearDiophantine(-K, C);
->>>>>>> 38c932829ec19b74b03691b43c569966f5cbeb43
         }
     }
 

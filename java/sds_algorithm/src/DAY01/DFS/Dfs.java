@@ -27,11 +27,8 @@ public class Dfs {
         K = Integer.parseInt(st.nextToken());
         words = new String[N];
 
-        if (K < 5) {
-            System.out.println(0);
-        } else if (K == 26) {
-            System.out.println(N);
-        }
+        if (K < 5) { System.out.println(0); }
+        else if (K == 26) { System.out.println(N); }
         else {            
             for (int i = 0; i < N; i++) {
                 String str = br.readLine();
