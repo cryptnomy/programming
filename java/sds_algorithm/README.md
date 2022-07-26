@@ -1,7 +1,7 @@
 # Baekjoon
 
 ## Algorithm basics
-- A. Stack Machine Executor (3425)<https://www.acmicpc.net/problem/3425>
+- A. [Stack Machine Executor (3425)](https://www.acmicpc.net/problem/3425)
 - B. SLIKAR (3055)
 - C. 가르침 (1062)
 - D. 후보 추천하기 (1713)
