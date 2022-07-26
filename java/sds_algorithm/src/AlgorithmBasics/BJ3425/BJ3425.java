@@ -29,8 +29,8 @@ public class BJ3425 {
                 if (line.length() == 3) {
                     list.add(line);
                 } else {    // for "NUM X"
-                    list.add(line.substring(0, 3)); // NUM
-                    list.add(line.substring(4));             // X
+                    list.add(line.substring(0, 3));  // NUM
+                    list.add(line.substring(4));  // X
                 }
                 line = br.readLine();
             }
