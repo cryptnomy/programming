@@ -68,22 +68,22 @@ public class BJ2143SDS {
                 long countA = 0;
                 long countB = 0;
                 while (ptA < subA.size() && subA.get(ptA) == currentA) {
-                    countA++;
-                    ptA++;
+                    ++countA;
+                    ++ptA;
                 }
                 while (ptB < subB.size() && subB.get(ptB) == target) {
-                    countB++;
-                    ptB++;
+                    ++countB;
+                    ++ptB;
                 }
                 result += countA * countB;
             }
             // currentB > target -> ptB++
             else if (subB.get(ptB) > target) {
-                ptB++;
+                ++ptB;
             }
             // currentB < target -> ptA++
             else {
-                ptA++;
+                ++ptA;
             }
             // Escape condition
             if (ptA == subA.size() || ptB == subB.size()) break;

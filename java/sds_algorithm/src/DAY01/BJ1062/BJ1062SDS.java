@@ -35,10 +35,10 @@ public class BJ1062SDS {
 
         visited = new boolean[26];
         visited['a' - 'a'] = true;
+        visited['c' - 'a'] = true;
+        visited['i' - 'a'] = true;
         visited['n' - 'a'] = true;
         visited['t' - 'a'] = true;
-        visited['i' - 'a'] = true;
-        visited['c' - 'a'] = true;
 
         selectedCount = 5;
         max = countWords();

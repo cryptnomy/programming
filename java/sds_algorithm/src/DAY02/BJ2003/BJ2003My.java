@@ -36,7 +36,7 @@ public class BJ2003My {
                 break;
             }
         }
-        System.out.println(count);
+        System.out.print(count);
     }
 
     // static int twoPointer(int[] arr, int N, int M) {

@@ -80,12 +80,8 @@ class Nominee implements Comparable<Nominee> {
     // 1. 추천수, 2. 시간
     @Override
     public int compareTo(Nominee o) {
-        int comp = Integer.compare(count, o.count);
-        if (comp == 0) {
-            return Integer.compare(timeStamp, o.timeStamp);
-        } else {
-            return comp;
-        }
+        int comp = Integer.compare(this.count, o.count);
+        return comp == 0 ? Integer.compare(this.timeStamp, o.timeStamp) : comp;
     }
 
     @Override
