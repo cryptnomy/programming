@@ -1,0 +1,44 @@
+package DAY09.BJ2579;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class BJ2579 {
+    static int N;
+    static int[] stairs;
+    static Queue<Integer> q;
+    static int index;
+    static int count;
+    static int[] scoreSum;
+
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        N = Integer.parseInt(br.readLine());
+        stairs = new int[N];
+        for (int i = 0; i < N; i++) {
+            stairs[i] = Integer.parseInt(br.readLine());
+        }
+        if (N == 1) {
+            System.out.println(stairs[0]);
+            return;
+        }
+        q = new LinkedList<>();
+        index = -1;
+        count = 0;
+        q.add(1);
+        q.add(2);
+        while (q.isEmpty()) {
+            int i = q.poll();
+            index += i;
+            if (index >= N) { continue; }
+            if (i == 1) { ++count; }
+            if (count == 3) {
+                count = 0;
+                continue;
+            }
+        }
+    }
+}
