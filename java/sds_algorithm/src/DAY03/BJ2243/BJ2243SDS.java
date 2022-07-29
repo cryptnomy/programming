@@ -21,12 +21,11 @@ public class BJ2243SDS {
 
         st = new StringTokenizer(br.readLine());
         A = Integer.parseInt(st.nextToken());
+        B = Integer.parseInt(st.nextToken());
         if (A == 2) {
-            B = Integer.parseInt(st.nextToken());
             C = Integer.parseInt(st.nextToken());
             update(1, S, 1, B, C);
         } else if (A == 1) {
-            B = Integer.parseInt(st.nextToken());
             int index = query(1, S, 1, B);
             update(1, S, 1, index, -1);
             System.out.println(index);
