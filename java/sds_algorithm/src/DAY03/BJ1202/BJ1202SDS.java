@@ -24,12 +24,13 @@ public class BJ1202SDS {
         jewelries = new Jewelry[N];
         for (int i = 0; i < N; i++) {
             st = new StringTokenizer(br.readLine());
-            jewelries[i] = new Jewelry(Integer.parseInt(st.nextToken()), Integer.parseInt(st.nextToken()));
+            jewelries[i] = new Jewelry(Integer.parseInt(st.nextToken()),    // mass
+                                        Integer.parseInt(st.nextToken()));  // value
         }
 
         bags = new int[K];
         for (int i = 0; i < K; i++) {
-            bags[i] = Integer.parseInt(br.readLine());
+            bags[i] = Integer.parseInt(br.readLine());  // max mass
         }
 
         // 가방 오름차순 정렬

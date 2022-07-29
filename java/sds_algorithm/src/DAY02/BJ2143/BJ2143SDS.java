@@ -13,7 +13,7 @@ public class BJ2143SDS {
     static long T; 
     static int N, M;
     static long[] inputA, inputB;
-    static List<Integer> subA, subB;
+    static List<Long> subA, subB;
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -33,8 +33,8 @@ public class BJ2143SDS {
             inputB[i] = Long.parseLong(st.nextToken());
         }
         // Initialization of sub arrays
-        List<Long> subA = new ArrayList<>();
-        List<Long> subB = new ArrayList<>();
+        subA = new ArrayList<>();
+        subB = new ArrayList<>();
         // subA
         for (int i = 0; i < N; i++) {
             long sum = inputA[i];

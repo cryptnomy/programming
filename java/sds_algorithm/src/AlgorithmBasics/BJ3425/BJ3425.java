@@ -4,7 +4,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-//import java.util.Arrays;
 import java.util.List;
 
 public class BJ3425 {
@@ -13,7 +12,7 @@ public class BJ3425 {
     static long[] stack = new long[1001];
     static int head;
     static int N;
-    static int MAX = 1_000_000_000;
+    static long MAX = 1_000_000_000L;
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

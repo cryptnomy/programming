@@ -30,8 +30,8 @@ public class BJ1806 {
         int low = 0, high = 0, minLength = Integer.MAX_VALUE, pSum = arr[0];
         while (true) {
             if (pSum >= S) {
-                pSum -= arr[low];
-                minLength = Math.min(minLength, high + 1 - (low++));
+                minLength = Math.min(minLength, high + 1 - low);
+                pSum -= arr[low++];
             } else {
                 pSum += arr[++high];
             }

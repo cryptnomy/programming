@@ -40,7 +40,7 @@ public class BJ1202My {
         Collections.sort(bags);
         Collections.sort(jewels);
 
-        Queue<Integer> pq = new PriorityQueue<>((o1, o2) -> (o2-o1));
+        Queue<Integer> pq = new PriorityQueue<>((o1, o2) -> (o2 - o1));
         long answer = 0;
         int j = 0;
 
