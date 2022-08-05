@@ -66,7 +66,7 @@ public class BJ1927My {
             if (x == 0) {
                 pop(arr, tail);
             } else if (x > 1) {
-
+                
             }
         }
     }
