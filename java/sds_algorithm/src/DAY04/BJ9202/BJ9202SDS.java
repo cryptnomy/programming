@@ -43,7 +43,7 @@ public class BJ9202SDS {
                     map[i][k] = in.charAt(k);
                 }
             }
-            br.readLine();
+            br.readLine();  // blank
             for (int y = 0; y < 4; y++) {
                 for (int x = 0; x < 4; x++) {
                     //출발 가능 조건 -> root가 해당 child를 가지면
@@ -59,6 +59,19 @@ public class BJ9202SDS {
 
     }
 
+    static void insertTrieNode(String word) {
+        TrieNode current = root;
+        for (int i = 0; i < word.length(); i++) {
+            char a = word.charAt(i);
+            int index = a - 'A';
+            if (current.chlid[index] == null) {
+                current.chlid[index] = new TrieNode();
+            }
+            current = current.chlid[index];
+        }
+        current.isWord = true;
+    }
+
     static void search(int y, int x, TrieNode node) {
         // 1. 체크인 -> visited
         visited[y][x] = true;
@@ -68,7 +81,7 @@ public class BJ9202SDS {
             node.isHit = true;
             //답 작업 -> 길이, 단어
             String foundWord = sb.toString();
-            int length = foundWord.length();
+            //int length = foundWord.length();
             System.out.println(foundWord);
         }
         // 3. 연결된 곳을 순회 -> 8방
@@ -86,19 +99,6 @@ public class BJ9202SDS {
         // 6. 체크아웃
         visited[y][x] = false;
         sb.deleteCharAt(sb.length() - 1);
-    }
-
-    static void insertTrieNode(String word) {
-        TrieNode current = root;
-        for (int i = 0; i < word.length(); i++) {
-            char a = word.charAt(i);
-            int index = a - 'A';
-            if (current.chlid[index] == null) {
-                current.chlid[index] = new TrieNode();
-            }
-            current = current.chlid[index];
-        }
-        current.isWord = true;
     }
 }
 

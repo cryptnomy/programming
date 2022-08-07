@@ -12,10 +12,10 @@ public class BJ11653 {
         N = Integer.parseInt(br.readLine());
 
         StringBuilder sb = new StringBuilder();
-        for (int i = 2; i <= Math.sqrt(N); i++) {
-            while (N % i == 0) {
-                sb.append(i).append('\n');
-                N /= i;
+        for (int p = 2; p <= Math.sqrt(N); p++) {
+            while (N % p == 0) {
+                sb.append(p).append('\n');
+                N /= p;
             }
         }
         if (N != 1) { sb.append(N); }

@@ -19,7 +19,10 @@ public class BJ1717 {
 
         parent = new int[N + 1];
         level = new int[N + 1];
-        initialize();
+        for (int i = 0; i <= N; i++) {
+            parent[i] = i;
+            level[i] = 1;
+        }
 
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < M; i++) {
@@ -34,13 +37,6 @@ public class BJ1717 {
             }
         }
         System.out.println(sb);
-    }
-
-    static void initialize() {
-        for (int i = 0; i <= N; i++) {
-            parent[i] = i;
-            level[i] = 1;
-        }
     }
 
     static void union(int a, int b) {

@@ -144,7 +144,6 @@ public class BJ9202Other {
     }
  
     private static class TrieNode {
- 
         TrieNode[] child = new TrieNode[26]; // 알파벳 대문자로만 이루어져 있다.
         boolean isFinish = false;
         int nChild = 0; // 자식 노드의 갯수
