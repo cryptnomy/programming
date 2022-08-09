@@ -37,6 +37,8 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.StringTokenizer;
 
 public class Solution {
@@ -44,16 +46,22 @@ public class Solution {
     static long answer;
     static long[] score;
     static int[] parent;
+    static List<?>[] adj; // <Edge>
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         StringTokenizer st;
+
         T = Integer.parseInt(br.readLine());
         for (int tc = 0; tc < T; tc++) {
             st = new StringTokenizer(br.readLine());
             V = Integer.parseInt(st.nextToken());
             E = Integer.parseInt(st.nextToken());
+            adj = new ArrayList[V+1];
+            for (int i = 0; i < V + 1; ++i) {
+                adj[i] = new ArrayList<Edge>();
+            }
 
             bw.write("#" + tc + " " + answer + "\n");
             bw.flush();
@@ -72,5 +80,19 @@ public class Solution {
 
     static int find(int x) {
         return parent[x] == x ? x : (parent[x] = find(parent[x]));
+    }
+}
+
+class Edge implements Comparable<Edge> {
+    int v, w;
+
+    public Edge(int v, int w) {
+        this.v = v;
+        this.w = w;
+    }
+
+    @Override
+    public int compareTo(Edge o) {
+        return this.w - o.w;
     }
 }
