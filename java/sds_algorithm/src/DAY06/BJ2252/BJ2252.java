@@ -1,9 +1,12 @@
 package DAY06.BJ2252;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.util.ArrayList;
+// import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
@@ -11,21 +14,24 @@ import java.util.StringTokenizer;
 
 public class BJ2252 {
     static int N, M;
-    static int[] degree;
-    static int[] parent;
-    static List<Integer>[] list;
-    static StringTokenizer st;
+    static int[] front;
+    static List<List<Integer>> list;
+    static List<Integer> innerList;
     static Queue<Integer> queue;
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        st = new StringTokenizer(br.readLine());
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        StringTokenizer st = new StringTokenizer(br.readLine());
+
         N = Integer.parseInt(st.nextToken());
         M = Integer.parseInt(st.nextToken());
-        degree = new int[N + 1];
-        list = new ArrayList[N + 1];
+
+        front = new int[N + 1];
+        list = new ArrayList<>();
         for (int i = 0; i <= N; i++) {
-            list[i] = new ArrayList<>();
+            innerList = new ArrayList<>();
+            list.add(innerList);
         }
 
         int a, b;
@@ -33,24 +39,29 @@ public class BJ2252 {
             st = new StringTokenizer(br.readLine());
             a = Integer.parseInt(st.nextToken());
             b = Integer.parseInt(st.nextToken());
-            list[a].add(b);
-            ++degree[b];
+            list.get(a).add(b);
+            ++front[b];
         }
+        // for (int i = 0; i < list.size(); i++) {
+        //     bw.append(list.get(i).toString()).append(" ");
+        // }
+        // bw.append("\n")
 
         queue = new LinkedList<>();
         for (int i = 1; i <= N; i++) {
-            if (degree[i] == 0) { queue.add(i); }
+            if (front[i] == 0) { queue.add(i); }
         }
-        StringBuilder sb = new StringBuilder();
+
         while (!queue.isEmpty()) {
             int current = queue.poll();
-            sb.append(String.valueOf(current)).append(" ");            
-            for (int i = 0; i < list[current].size(); i++) {
-                int next = list[current].get(i);
-                --degree[next];
-                if (degree[next] == 0) { queue.add(next); }
+            bw.append(String.valueOf(current)).append(" ");            
+            for (int next : list.get(current)) {
+                --front[next];
+                if (front[next] == 0) { queue.add(next); }
             }
         }
-        System.out.println(sb);
+        bw.flush();
+        bw.close();
+        br.close();
     }
 }
