@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class BJ2252 {
+public class BJ2252My1 {
     static int N, M;
     static int[] front;
     static List<List<Integer>> list;
@@ -56,8 +56,7 @@ public class BJ2252 {
             int current = queue.poll();
             bw.append(String.valueOf(current)).append(" ");            
             for (int next : list.get(current)) {
-                --front[next];
-                if (front[next] == 0) { queue.add(next); }
+                if (--front[next] == 0) { queue.add(next); }
             }
         }
         bw.flush();
