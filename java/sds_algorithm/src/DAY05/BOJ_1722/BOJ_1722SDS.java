@@ -46,8 +46,8 @@ public class BOJ_1722SDS {
             for (int i = 0; i < N; i++) {
                 nums[i] = Integer.parseInt(st.nextToken());
             }
+
             long result = 0;
-            
             for (int i = 0; i < N; i++) {
                 for (int j = 1; j < nums[i]; j++) {
                     if (visited[j] == false) {

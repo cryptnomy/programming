@@ -54,6 +54,7 @@ public class BOJ_1753My1 {
         dist[0] = -1;
         dist[start] = 0;
         pq.offer(new Edge(start, 0));
+        
         int newDist;
         while (!pq.isEmpty()) {
             Edge curr = pq.poll();

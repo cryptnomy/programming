@@ -1,4 +1,4 @@
-package AlgorithmBasics.BJ3425;
+package AlgorithmBasics.BOJ_3425;
 
 import java.io.BufferedReader;
 import java.io.IOException;
