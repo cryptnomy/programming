@@ -1,9 +1,9 @@
-package DAY07.BOJ_2458;
+package DAY07.BJ2458;
 
 import java.io.*;
 import java.util.*;
 
-public class BOJ_2458My1 {
+public class BJ2458My1 {
     static int V, E;
     static List<List<Integer>> adjOut, adjIn;
     static boolean[] visited;

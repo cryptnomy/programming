@@ -16,7 +16,6 @@ public class BOJ_2252My1 {
     static int N, M;
     static int[] front;
     static List<List<Integer>> list;
-    static List<Integer> innerList;
     static Queue<Integer> queue;
 
     public static void main(String[] args) throws IOException {
@@ -30,8 +29,7 @@ public class BOJ_2252My1 {
         front = new int[N + 1];
         list = new ArrayList<>();
         for (int i = 0; i <= N; i++) {
-            innerList = new ArrayList<>();
-            list.add(innerList);
+            list.add(new ArrayList<>());
         }
 
         int a, b;

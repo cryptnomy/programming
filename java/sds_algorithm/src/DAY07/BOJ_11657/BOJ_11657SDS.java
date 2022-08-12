@@ -30,7 +30,10 @@ public class BOJ_11657SDS {
                 w = edgeList[j][2];
                 if(D[a] == INF) continue;
                 if(D[b] > D[a] + w) {
-                    if(i == N) flag = true;
+                    if(i == N) {
+                        flag = true;
+                        break;
+                    }
                     D[b] = D[a] + w;
                 }
             }
