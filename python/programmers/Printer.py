@@ -1,3 +1,12 @@
+def solution(priorities,location):
+    '''
+    with priority queue
+    '''
+    import heapq
+
+    d = {}
+    d = {i: d.get(i, []).append(v) for i, v in enumerate(priorities)}
+
 def solution(priorities, location):
     q_priority = [(i, p) for i, p in enumerate(priorities)]
     answer = 0
