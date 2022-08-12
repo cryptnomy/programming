@@ -1,0 +1,102 @@
+package DAY01.BJ3055;
+
+//import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Scanner;
+
+public class BOJ_3055SDS {
+    static int[] MY = {-1, 1, 0, 0};
+    static int[] MX = {0, 0, -1, 1};
+    static char[][] fields;
+    static int[][] dp;
+    static int R, C;
+    static Queue<Point> queue;
+    static boolean foundAnswer;
+    
+    public static void main(String[] args) throws IOException {
+        // System.setIn(new FileInputStream("src/DAY01/BJ3055/input.txt"));
+        Scanner sc = new Scanner(System.in);
+
+        R = sc.nextInt();
+        C = sc.nextInt();
+
+        fields = new char[R][C];
+        dp = new int[R][C];
+        queue = new LinkedList<>();
+
+        Point st = null;
+        for (int r = 0; r < R; r++) {
+            String line = sc.next();
+            for (int c = 0; c < C; c++) {
+                fields[r][c] = line.charAt(c);
+                if (fields[r][c] == '*') {
+                    queue.add(new Point(r, c, '*'));
+                } else if (fields[r][c] == 'S') {
+                    st = new Point(r, c, 'S');
+                }
+            }
+        }
+        sc.close();
+        queue.add(st);
+
+        // Q [ * , S ]
+
+        while (!queue.isEmpty()) {
+            // 1. 큐에서 꺼내 옴 -> *, S, ., D
+            Point p = queue.poll();
+            // 2. 목적지인가? -> D
+            if (p.type == 'D') {
+                // 답 출력
+                System.out.println(dp[p.y][p.x]);
+                foundAnswer = true;
+                break;
+            }
+            // 3. 연결된 곳을 순회 -> 상하좌우
+            for (int i = 0; i < 4; i++) {
+                int ty = p.y + MY[i];
+                int tx = p.x + MX[i];
+                // 4. 갈 수 있는가? -> (공통): 맵 안에 들어오는가
+                if (-1 < ty && ty < R && -1 < tx && tx < C) {
+                    if (p.type == '.' || p.type == 'S') {
+                        // 4. 갈 수 있는가? -> (고슴도치): (. or D) and 방문하지 않은 곳
+                        if ((fields[ty][tx] == '.' || fields[ty][tx] == 'D') && dp[ty][tx] == 0) {
+                            // 5. 체크인 (고슴도치): dp[][] = 이동거리
+                            dp[ty][tx] = dp[p.y][p.x] + 1;
+                            // 6. 큐에 넣음
+                            queue.add(new Point(ty, tx, fields[ty][tx]));
+                        }
+                    } else if (p.type == '*') {
+                        // 4. 갈 수 있는가? -> (물): ., S
+                        if (fields[ty][tx] == '.' || fields[ty][tx] == 'S') {
+                            // 5. 체크인 (물): fields[][] = *
+                            fields[ty][tx] = '*';
+                            // 6. 큐에 넣음
+                            queue.add(new Point(ty, tx, '*'));
+                        }
+                    }
+                }
+            }
+        }
+        if (!foundAnswer)
+            System.out.println("KAKTUS");
+    }
+}
+
+class Point {
+    int y;
+    int x;
+    char type;
+
+    Point(int y, int x, char type) {
+        this.y = y;
+        this.x = x;
+        this.type = type;
+    }
+
+    @Override
+    public String toString() {
+        return "Point{" + "y=" + y + ", x=" + x + ", type=" + type + "}";
+    }
+}
