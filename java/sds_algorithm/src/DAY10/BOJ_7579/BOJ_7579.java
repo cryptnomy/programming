@@ -22,21 +22,23 @@ public class BOJ_7579 {
         memoryArr = new int[N];
         costArr = new int[N];
         dp = new int[N][10001];
+        
         StringTokenizer st1 = new StringTokenizer(br.readLine());
         StringTokenizer st2 = new StringTokenizer(br.readLine());
+
         for (int i = 0; i < N; i++) {
             memoryArr[i] = Integer.parseInt(st1.nextToken());
             costArr[i] = Integer.parseInt(st2.nextToken());
         }
+
         for (int i = 0; i < N; i++) {
-            int memory = memoryArr[i];
-            int cost = costArr[i];
             for (int j = 0; j < 10001; j++) {
                 if (i == 0) {
-                    if (j >= cost) { dp[i][j] = memory; }
+                    if (j >= costArr[i]) { dp[i][j] = memoryArr[i]; }
                 } else {
-                    if (j >= cost) { dp[i][j] = Math.max(dp[i-1][j-cost] + memory, dp[i-1][j]); }
-                    else { dp[i][j] = dp[i-1][j]; }
+                    if (j >= costArr[i]) {
+                        dp[i][j] = Math.max(dp[i-1][j-costArr[i]] + memoryArr[i], dp[i-1][j]);
+                    } else { dp[i][j] = dp[i-1][j]; }
                 }
                 if (dp[i][j] >= M) { answer = Math.min(answer, j); }
             }
