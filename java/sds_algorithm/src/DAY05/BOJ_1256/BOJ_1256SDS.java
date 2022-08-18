@@ -54,7 +54,7 @@ public class BOJ_1256SDS {
 
     public static int choose(int n, int r) {
         if (n == r || r == 0) { return 1; }
-        else if (dp[n][r] != 0) { return dp[n][r]; }
-        else { return dp[n][r] = Math.min(KMAX, choose(n - 1, r - 1) + choose(n - 1, r)); }
+        if (dp[n][r] != 0) { return dp[n][r]; }
+        return dp[n][r] = Math.min(KMAX, choose(n - 1, r - 1) + choose(n - 1, r));
     }
 }

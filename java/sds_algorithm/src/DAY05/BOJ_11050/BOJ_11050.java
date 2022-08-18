@@ -26,10 +26,8 @@ public class BOJ_11050 {
         nCk[0][0] = nCk[1][0] = nCk[1][1] = 1;
         for (int n = 2; n <= N; n++) {
             nCk[n][0] = 1;
-        }
-        for (int n = 2; n <= N; n++) {
             for (int k = 1; k <= n; k++) {
-                nCk[n][k] = nCk[n - 1][k] + nCk[n - 1][k - 1];
+                nCk[n][k] = nCk[n-1][k] + nCk[n-1][k-1];
             }
         }
     }
