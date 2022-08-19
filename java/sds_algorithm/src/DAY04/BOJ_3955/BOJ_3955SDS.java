@@ -27,7 +27,7 @@ public class BOJ_3955SDS {
 
                 y0 %= K;
                 if (y0 < 0) { y0 += K; }
-                y0 = Math.max(y0, (K + C)/C);
+                y0 = Math.max(y0, K/C + 1);
 
                 if (y0 <= 1e9) { System.out.println(y0); }
                 else { System.out.println("IMPOSSIBLE"); }

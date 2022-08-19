@@ -25,7 +25,7 @@ public class BOJ_1202SDS {
         for (int i = 0; i < N; i++) {
             st = new StringTokenizer(br.readLine());
             jewelries[i] = new Jewelry(Integer.parseInt(st.nextToken()),    // mass
-                                        Integer.parseInt(st.nextToken()));  // value
+                                       Integer.parseInt(st.nextToken()));   // value
         }
 
         bags = new int[K];

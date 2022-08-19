@@ -28,10 +28,10 @@ public class BOJ_2042My2 {
 		}	
 		tree = new long[temp*2];
 		// Bottom-up initialization
-		for (int i=temp; i<N+temp; i++) {
+		for (int i = temp; i < N + temp; i++) {
 			tree[i] = Long.parseLong(br.readLine());
 		}
-		for (int i=temp; i<N+temp; i++) {
+		for (int i = temp; i < N + temp; i++) {
 			int p = i >> 1;
 			while (p != 0) {
 				tree[p] = tree[p] + tree[i];
@@ -39,7 +39,7 @@ public class BOJ_2042My2 {
 			}
 		}
 		
-		for (int i=0; i<M+K; i++) {
+		for (int i = 0; i < M + K; i++) {
 			st = new StringTokenizer(br.readLine());
 			int a = Integer.parseInt(st.nextToken());
 			int b = Integer.parseInt(st.nextToken());
