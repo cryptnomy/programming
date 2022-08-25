@@ -1,19 +1,34 @@
 # Binary search of sorted array with duplicates
 def binarySearch(arr, target):
-    low, high = 1, len(arr) - 1
+    low, high = 0, len(arr) - 1
+    z = -1
     while low < high:
         mid = (low + high) // 2
         if arr[mid] > target:
-            high = mid - 1
+            high = mid
+            # high = mid - 1
         else:
             low = mid + 1
-    if arr[high] > target:
-        return high - 1
-    else:
-        return high
+            z = mid
+    return z
 
-arr = [-1, 1, 1, 2, 4, 5, 5, 8, 8, 9]
+arr = [1, 1, 2, 2, 2, 5, 5, 8]
 target = 1
 
 idx = binarySearch(arr, target)
 print(idx)
+
+# def binarySearch2(arr, target):
+#     low, high = 0, len(arr) - 1
+#     count = -1
+#     while low <= high:
+#         mid = (low + high) // 2
+#         if (arr[mid] <= target):
+#             count = mid + 1
+#             low = mid + 1
+#         else:
+#             high = mid - 1
+#     return count
+
+# idx2 = binarySearch2(arr, target)
+# print(idx2)
