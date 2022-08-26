@@ -13,6 +13,7 @@
 - [1722 (순열의 순서)](https://github.com/gtbprog/programming/tree/master/java/sds_algorithm/src/DAY05/BOJ_1722/BOJ_1722My1.java) - Q. 1 3 2 4 몇 번째? A. 3
 #### Graph 1
 - 2252
+- [2458 (키 순서)](https://github.com/gtbprog/programming/blob/master/java/sds_algorithm/src/DAY07/BOJ_2458/BOJ_2458My1.java) - adjIn, adjOut idea
 - 3830
 #### Graph 2
 - 5719
