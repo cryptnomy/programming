@@ -44,8 +44,8 @@ public class BOJ_11438My3 {
             for (int next : adj.get(curr)) {
                 if (!visited[next]) {
                     visited[next] = true;
-                    dp[0][next] = curr;
-                    depth[next] = depth[curr] + 1;
+                    dp[0][next] = curr; // parent of next = curr; next = child of curr
+                    depth[next] = depth[curr] + 1; // topological order: top-down
                     q.add(next);
                 }
             }
@@ -53,7 +53,7 @@ public class BOJ_11438My3 {
 
         for (int i = 1; i < h; i++) {
             for (int j = 1; j <= V; j++) {
-                dp[i][j] = dp[i-1][dp[i-1][j]];
+                dp[i][j] = dp[i-1][dp[i-1][j]]; // j's 2^i ancestor
             }
         }
 
@@ -67,6 +67,7 @@ public class BOJ_11438My3 {
         }
         bw.flush();
         bw.close();
+        br.close();
     }
 
     static int lca(int a, int b) {
@@ -74,8 +75,9 @@ public class BOJ_11438My3 {
             int temp = a;
             a = b;
             b = temp;
-        }
+        } // make sure depth[a] <= depth[b] (a ~ upper in tree; b ~ lower; inaccurate)
         int diff = depth[b] - depth[a];
+        // move b to make depths of a and b as the same
         for (int i = 0; i < h; i++) {
             if ((diff & (1<<i)) != 0) {
                 b = dp[i][b];
