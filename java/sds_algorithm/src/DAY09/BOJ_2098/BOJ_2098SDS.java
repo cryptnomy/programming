@@ -45,5 +45,4 @@ public class BOJ_2098SDS {
         }
         return dp[cur][visit];
     }
-
 }

@@ -70,15 +70,15 @@ public class BOJ_1753My1 {
     }
 }
 
-class Edge implements Comparable<Edge> {
-    int v, w;
-    public Edge(int v, int w) {
-        super();
-        this.v = v;
-        this.w = w;
-    }
-    @Override
-    public int compareTo(Edge o) {
-        return this.w - o.w;
-    }
-}
+// class Edge implements Comparable<Edge> {
+//     int v, w;
+//     public Edge(int v, int w) {
+//         super();
+//         this.v = v;
+//         this.w = w;
+//     }
+//     @Override
+//     public int compareTo(Edge o) {
+//         return this.w - o.w;
+//     }
+// }
