@@ -30,4 +30,3 @@ while q and not dist:
             dp[ny][nx] = dp[y][x] + 1
             q.append((ny, nx, flooded))
 print(dist if dist else "KAKTUS")
-
