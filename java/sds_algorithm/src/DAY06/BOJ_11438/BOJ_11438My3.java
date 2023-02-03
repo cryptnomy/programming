@@ -13,6 +13,7 @@ public class BOJ_11438My3 {
     static int[] depth;
 
     public static void main(String[] args) throws IOException {
+        System.setIn(new FileInputStream("programming/java/sds_algorithm/src/DAY06/BOJ_11438/input_boj_11438.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         StringTokenizer st;
